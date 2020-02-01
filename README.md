@@ -4,4 +4,4 @@
 A simple photo editor embedded in Javafx
 
 
-![Alt text](src/main/resources/SimpleImageEditor.png)
+![Alt text](src/main/resources/SimpleImageEditor2.png)
