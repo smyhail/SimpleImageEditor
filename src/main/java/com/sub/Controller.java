@@ -48,16 +48,6 @@ public class Controller implements Initializable {
         tabPane.setDisable( false );
     }
 
-    public static void saveFilehhhh(BufferedImage img, String typeFile) {
-        File f = new File( "src/main/resources/newx.png" );
-        try {
-            ImageIO.write( img, typeFile, f );
-        } catch (IOException e) {
-            System.out.println( e );
-        }
-    }
-
-
     public static void saveFile(BufferedImage img, String typeFile){
         FileChooser fileChooser = new FileChooser();
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image Files...", "*.png"  ,"*.jpg" );
