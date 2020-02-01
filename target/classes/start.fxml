@@ -48,7 +48,7 @@
                      <content>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                            <right>
-                              <Button mnemonicParsing="false" onAction="#doJasnosc" prefHeight="25.0" prefWidth="120.0" text="change" BorderPane.alignment="CENTER">
+                              <Button mnemonicParsing="false" onAction="#doBrightness" prefHeight="25.0" prefWidth="120.0" text="change" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
                                     <Insets left="5.0" right="10.0" />
                                  </BorderPane.margin>

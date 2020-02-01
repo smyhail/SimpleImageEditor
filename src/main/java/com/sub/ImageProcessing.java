@@ -141,52 +141,7 @@ public class ImageProcessing {
             }
         }
         return img;
-
     }
-    public BufferedImage binary(File f)  {
-        BufferedImage img = null;
-
-        try {
-            img = ImageIO.read( f );
-        } catch (IOException e) {
-            System.out.println( e );
-        }
-
-        int pixel[];
-        int  k = 0;
-        Color color;
-        int rgb;
-        int imgSize = img.getWidth()*img.getHeight();
-
-
-        for (int i = 0; i < img.getWidth(); i++) {
-            for (int j = 0; j < img.getHeight(); j++) {
-
-                pixel = img.getRaster().getPixel( i,j,new int[3] );
-                k += pixel[0];
-            }
-        }
-
-        imgSize = k / imgSize;
-
-        for (int i = 0; i < img.getWidth(); i++) {
-            for (int j = 0; j < img.getHeight(); j++) {
-
-                pixel = img.getRaster().getPixel( i,j,new int[3] );
-                if(pixel[0]>imgSize) k = 255;
-                else
-                    k=0;
-                color = new Color(k,k,k);
-                rgb = color.getRGB();
-                img.setRGB( i,j,rgb );
-
-            }
-        }
-
-        return img;
-    }
-
-
 
 
 }

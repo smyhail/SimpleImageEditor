@@ -100,7 +100,7 @@ public class Controller implements Initializable {
         saveFile( img , getExt( f ) );
     }
 
-    public void doJasnosc(ActionEvent actionEvent) {
+    public void doBrightness(ActionEvent actionEvent) {
         File f = new File( fDir );
         ImageProcessing immage = new ImageProcessing();
 
