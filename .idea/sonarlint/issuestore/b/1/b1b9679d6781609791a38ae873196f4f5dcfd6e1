@@ -1,0 +1,26 @@
+
+]squid:S22591"AA "NullPointerException" could be thrown; "img" is nullable here.(›Æ‹õúÿÿÿÿ
+|squid:S4144’"XUpdate this method so that its implementation is not identical to "binaryy" on line 104.(½îÙ½ıÿÿÿÿ8Ø±ÂŒ€.
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+]squid:S2259D"AA "NullPointerException" could be thrown; "img" is nullable here.(›Æ‹õúÿÿÿÿ
+U
+squid:S106˜"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+Bsquid:S1481+"&Remove this unused "g" local variable.( ¾ƒ­ÿÿÿÿÿ
+[squid:S1197q"8Move the array designator from the variable to the type.(»ÖªÛøÿÿÿÿ8±­²Œ€.
+^squid:S2259u"AA "NullPointerException" could be thrown; "img" is nullable here.(õß‰M8ø¼Œ€.
+T
+squid:S106/"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+Ysquid:S2184K"BCast one of the operands of this division operation to a "double".(¯Ç­Æ
+Xsquid:S2259Ÿ"AA "NullPointerException" could be thrown; "img" is nullable here.(õß‰M
+[
+squid:S106n"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8âÊ»Œ€.
+]squid:S2259"AA "NullPointerException" could be thrown; "img" is nullable here.(›Æ‹õúÿÿÿÿ
+T
+squid:S106["9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+@squid:S1481F")Remove this unused "type" local variable.(Œ³Õ¤
+Xsquid:S2259]"AA "NullPointerException" could be thrown; "img" is nullable here.(Ø”âˆ
+T
+squid:S106A"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+Ysquid:S2184K"BCast one of the operands of this division operation to a "double".(¯Ç­Æ
+Usquid:S1197›"8Move the array designator from the variable to the type.(»ÖªÛøÿÿÿÿ

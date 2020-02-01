@@ -1,0 +1,6 @@
+
+Msquid:S2696"6Make the enclosing method "static" or remove this set.(ÜõÕÏ
+Lsquid:S2209"5Change this instance-reference to a static reference.(ÜõÕÏ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Äç·Şùÿÿÿÿ8ÏÅĞŒ€.
