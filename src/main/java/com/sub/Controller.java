@@ -42,9 +42,6 @@ public class Controller implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
 
-        System.out.println(sliderR.getValue());
-       // tabPane.setDisable( true );
-        txtDir.setText( "C:\\Users\\smyha\\OneDrive\\Pulpit\\aaaaaaaaaaaa.png" );
     }
 
     public void unDisable(){
@@ -63,7 +60,7 @@ public class Controller implements Initializable {
 
     public static void saveFile(BufferedImage img, String typeFile){
         FileChooser fileChooser = new FileChooser();
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("wybierz...", "*.png", "*.jpg");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image Files...", "*.png"  ,"*.jpg" );
         fileChooser.getExtensionFilters().add(extFilter);
         String pp = Paths.get(".").toAbsolutePath().normalize().toString();
         fileChooser.initialDirectoryProperty().set( new File( pp ) );
@@ -74,30 +71,10 @@ public class Controller implements Initializable {
             } catch (IOException e) {
                 System.out.println( e );
             }
-            System.out.println("Zapisano");
+            System.out.println("Save");
         }
     }
 
-
-
-
-    public static void monitor() {
-        File f = new File( fDir );
-        ImageProcessing immage = new ImageProcessing();
-        // BufferedImage img = immage.gryyscale(f);
-        //BufferedImage img = immage.binary(f);
-        //  BufferedImage img = immage.brightbes(f);
-        //   BufferedImage img = null;
-        //   try {
-        //       img = immage.resize(f, 200);
-        //    } catch (IOException e) {
-        //        e.printStackTrace();
-        //  }
-        //  BufferedImage img = immage.rotate( f, 90 );
-        //BufferedImage img = immage.brightness( f, (float) 1.8 );
-       // saveFile( img , getExt( f ) );
-
-}
     public void loadImage(ActionEvent actionEvent) throws FileNotFoundException {
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
@@ -129,7 +106,7 @@ public class Controller implements Initializable {
         File f = new File( fDir );
 
         ImageProcessing immage = new ImageProcessing();
-        BufferedImage img = immage.gryyscale(f);
+        BufferedImage img = immage.grayscale(f);
         saveFile( img , getExt( f ) );
     }
 
@@ -159,6 +136,13 @@ public class Controller implements Initializable {
             saveFile( img, getExt( f ) );
         }
 
+    }
 
+    public void doBinary(ActionEvent actionEvent) {
+        File f = new File( fDir );
+
+        ImageProcessing immage = new ImageProcessing();
+        BufferedImage img = immage.binaryy(f);
+        saveFile( img , getExt( f ) );
     }
 }

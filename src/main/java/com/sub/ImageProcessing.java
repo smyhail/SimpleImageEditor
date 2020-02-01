@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ImageProcessing {
 
 
-    public BufferedImage gryyscale(File f) {
+    public BufferedImage grayscale(File f) {
         BufferedImage img = null;
 
         try {
@@ -101,36 +101,48 @@ public class ImageProcessing {
         return resizedImage;
     }
 
-    //todo raczej do usuniecia
-    public BufferedImage brightbes(File f) {
+    public BufferedImage binaryy(File f){
+
         BufferedImage img = null;
-        int pixel[];
-        int factory = 50;
         try {
             img = ImageIO.read( f );
         } catch (IOException e) {
             System.out.println( e );
         }
+
+        int pixel[];
+        int  k = 0;
+        Color color;
+        int rgb;
+        int imgSize = img.getWidth()*img.getHeight();
+
+
         for (int i = 0; i < img.getWidth(); i++) {
             for (int j = 0; j < img.getHeight(); j++) {
+
                 pixel = img.getRaster().getPixel( i,j,new int[3] );
+                k += pixel[0];
+            }
+        }
 
+        imgSize = k / imgSize;
 
-                int k = pixel[0] + factory;
-                if (k>255)k=255;
-                else if(k<0)k=0;
+        for (int i = 0; i < img.getWidth(); i++) {
+            for (int j = 0; j < img.getHeight(); j++) {
 
-                Color color = new Color(k,k,k);
-                int rgb = color.getRGB();
+                pixel = img.getRaster().getPixel( i,j,new int[3] );
+                if(pixel[0]>imgSize) k = 255;
+                else
+                    k=0;
+                color = new Color(k,k,k);
+                rgb = color.getRGB();
                 img.setRGB( i,j,rgb );
-
 
             }
         }
         return img;
+
     }
-
-
     public BufferedImage binary(File f)  {
         BufferedImage img = null;
 

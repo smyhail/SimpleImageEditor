@@ -7,12 +7,11 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #10b1de;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sub.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #10b1de;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sub.Controller">
    <top>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="614.0" text="Simple image editor" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
          <font>
@@ -31,16 +30,25 @@
                      <content>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                            <center>
-                              <Button mnemonicParsing="false" onAction="#doGrayscale" prefHeight="25.0" prefWidth="234.0" text="Zmień" BorderPane.alignment="CENTER" />
+                              <Button mnemonicParsing="false" onAction="#doGrayscale" prefHeight="25.0" prefWidth="250.0" text="change" BorderPane.alignment="CENTER" />
                            </center>
                         </BorderPane>
                      </content>
                 </Tab>
-                <Tab text="Jasność">
+                  <Tab text="Binary">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <Button mnemonicParsing="false" onAction="#doBinary" prefHeight="25.0" prefWidth="250.0" text="Change" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                <Tab text="Brightness">
                      <content>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                            <right>
-                              <Button mnemonicParsing="false" onAction="#doJasnosc" prefHeight="25.0" prefWidth="109.0" text="Zmien" BorderPane.alignment="CENTER">
+                              <Button mnemonicParsing="false" onAction="#doJasnosc" prefHeight="25.0" prefWidth="120.0" text="change" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
                                     <Insets left="5.0" right="10.0" />
                                  </BorderPane.margin>
@@ -55,11 +63,11 @@
                         </BorderPane>
                      </content>
                 </Tab>
-                  <Tab text="Obrót">
+                  <Tab text="Rotate">
                      <content>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                            <right>
-                              <Button mnemonicParsing="false" onAction="#doRotate" prefHeight="25.0" prefWidth="109.0" text="Zmien" BorderPane.alignment="CENTER">
+                              <Button mnemonicParsing="false" onAction="#doRotate" prefHeight="25.0" prefWidth="120.0" text="change" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
                                     <Insets left="5.0" right="5.0" />
                                  </BorderPane.margin>
@@ -75,7 +83,7 @@
                         </BorderPane>
                      </content>
                   </Tab>
-                  <Tab text="Rozmiar">
+                  <Tab text="Size">
                      <content>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                            <center>
@@ -86,7 +94,7 @@
                               </Slider>
                            </center>
                            <right>
-                              <Button mnemonicParsing="false" onAction="#doSize" text="Button" BorderPane.alignment="CENTER">
+                              <Button mnemonicParsing="false" onAction="#doSize" prefHeight="25.0" prefWidth="120.0" text="change" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
                                     <Insets left="5.0" right="10.0" />
                                  </BorderPane.margin>
@@ -97,7 +105,6 @@
                   </Tab>
               </tabs>
             </TabPane>
-            <ImageView fx:id="window" fitHeight="164.0" fitWidth="602.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </VBox>
    </center>
